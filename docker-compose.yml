@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+  webhook:
+    image: ptsiampas/webhook:latest
+    build:
+      context: ./
+    volumes:
+      - ./web:/repo
+    ports:
+      - 9091:8080
